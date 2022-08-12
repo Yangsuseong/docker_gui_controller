@@ -1,4 +1,5 @@
 import os
+import subprocess
 import time
 from tkinter import ttk
 from tkinter import *
@@ -273,23 +274,15 @@ lab1.config(text="Docker images")
 # 리스트박스
 lb1 = Listbox(win)
 docker_preprocessing()
-lb1.place(x=20, y=50, width=470, height=360)
-
-xscrollbar = Scrollbar(win, orient="horizontal")
-xscrollbar.config(command=lb1.xview)
-xscrollbar.place(x=20, y=410, width=470, height=20)
-
-yscrollbar = Scrollbar(win, orient="vertical")
-yscrollbar.config(command=lb1.yview)
-yscrollbar.place(x=490, y=50, width=20, height=360)
+lb1.place(x=20, y=50, width=490, height=380)
 
 
 # Button
-up_btn = Button(win, text="Undo")
+up_btn = Button(win, text="X")
 up_btn.config(command=undo_select_image)
 up_btn.place(x=70, y=470, width=160, height=30)
 
-down_btn = Button(win, text="Select")
+down_btn = Button(win, text="V")
 down_btn.config(command=select_image)
 down_btn.place(x=280, y=470, width=160, height=30)
 
@@ -297,7 +290,7 @@ down_btn.place(x=280, y=470, width=160, height=30)
 # 선택된 이미지 이름
 ent1 = Entry(win)
 ent1.place(x=20, y=530, width=490, height=30)
-#ent1.config(text="test")
+ent1.config(text="test")
 
 
 # 새로고침 버튼
@@ -408,7 +401,7 @@ r_ent_command.place(x=720, y=460, width=400, height=30)
 
 
 # Button
-cancle_btn = Button(win, text="Reset")
+cancle_btn = Button(win, text="Cancle")
 cancle_btn.config(command=cancle_button)
 cancle_btn.place(x=950, y=520, width=100, height=50)
 
@@ -425,7 +418,7 @@ summit_btn.place(x=1070, y=520, width=100, height=50)
 copyright = Label(
     win,
     font=("Helvetica", 9))
-copyright.config(text="Made By Suseong,Yang      Email : tntjd5596@miruware.com      2021.07.06")
+copyright.config(text="Made By Suseong,Yang      Email : tntjd5596@miruware.com      2021.06.30")
 copyright.place(x=700, y=570, width=500, height=30)
 
 
