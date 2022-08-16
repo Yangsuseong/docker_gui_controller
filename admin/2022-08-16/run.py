@@ -714,7 +714,7 @@ copyright = Label(
     win,
     font=("Helvetica", 9))
 copyright.config(text="Made By Suseong,Yang      Email : tntjd5596@miruware.com      2022.08.16")
-copyright.place(x=470, y=605, width=500, height=30)
+copyright.place(x=420, y=605, width=500, height=30)
 
 
 
