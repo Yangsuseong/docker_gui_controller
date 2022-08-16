@@ -476,6 +476,7 @@ def t2_push_btn_action():
     else:
         messagebox.showinfo("Info", "Image Push Will be Start. \n Please Check Console.")
         command = "docker push " + t2_ent1.get()
+        os.system(command)
 
 
 
