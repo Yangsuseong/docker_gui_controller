@@ -256,7 +256,10 @@ win.resizable(False, False)
 
 # 로고
 lab_img = Label(win)
-img = PhotoImage(file = "./image/miruware_logo.png", master=win)
+current_path = str(os.popen("pwd").read())
+current_path = current_path.rstrip('\n')
+image_path = current_path + "/image/miruware_logo.png"
+img = PhotoImage(file = image_path, master=win)
 img = img.subsample(2)
 lab_img.config(image=img)
 lab_img.place(x=900, y=20)
